@@ -1,0 +1,361 @@
+<div class="container-fluid p-0 m-0">
+    <!-- latest movie -->
+    <div>
+        <img src="https://cdn.vox-cdn.com/thumbor/cKNo8YybBSy-hFCoKL2WTtJmeKU=/0x0:2880x1528/1400x788/filters:focal(1440x764:1441x765)/cdn.vox-cdn.com/uploads/chorus_asset/file/23951611/Screen_Shot_2022_08_17_at_12.53.08_PM.png"
+            class="d-block w-100" height="500px" alt="...">
+    </div>
+    <!-- trending movies -->
+    <div class="row mt-5 pt-2 px-2 text-white" style="background-color: black;">
+        <h6>Trending now</h6>
+
+        <!-- ----------------------- -->
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex">
+                        <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of trendingMovies?.results; let i=index">
+                            <div class="card" style="background-color: black;" *ngIf="i<6">
+                                <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{movie.title}}</h5>
+                                    <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex">
+                        <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of trendingMovies?.results; let i=index">
+                            <div class="card" style="background-color: black;" *ngIf="i<6">
+                                <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{movie.title}}</h5>
+                                    <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex">
+                        <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of trendingMovies?.results; let i=index">
+                            <div class="card" style="background-color: black;" *ngIf="i<6">
+                                <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{movie.title}}</h5>
+                                    <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- ----------------------- -->
+
+        <!-- popular movies -->
+
+        <div class="row pt-2 px-2 text-white" style="background-color: black;">
+            <h6>Popular movies</h6>
+            <div id="carouselExampleControls2" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of popularMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of popularMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of popularMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- now playing movies -->
+        <div class="row pt-2 px-2 text-white" style="background-color: black;">
+            <h6>Now playing</h6>
+            <div id="carouselExampleControls3" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of nowPlayingMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of nowPlayingMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of nowPlayingMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- top rated movies -->
+        <div class="row pt-2 px-2 text-white" style="background-color: black;">
+            <h6>Top rated movies</h6>
+            <div id="carouselExampleControls4" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of topRatedMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of topRatedMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of topRatedMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>: {{movie.vote_average}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Upcoming movies -->
+        <div class="row pt-2 px-2 text-white" style="background-color: black;">
+            <h6>Upcoming movies</h6>
+            <div id="carouselExampleControls5" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of upcomingMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>:
+                                            {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of upcomingMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>:
+                                            {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of upcomingMovies?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>:
+                                            {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls5"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls5"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- TV Series -->
+        <div class="row pt-2 px-2 text-white" style="background-color: black;">
+            <h6>TV Series</h6>
+            <div id="carouselExampleControls6" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of originals?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>:
+                                            {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of originals?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>:
+                                            {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="col-6 col-sm-4 col-md-2 mt-3" *ngFor="let movie of originals?.results; let i=index">
+                                <div class="card" style="background-color: black;" *ngIf="i<6">
+                                    <img src="{{movie.backdrop_path}}" class="card-imd-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{movie.title}}</h5>
+                                        <p><span class="text-warning">Rating</span>:
+                                            {{movie.vote_average}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls6"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls6"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
